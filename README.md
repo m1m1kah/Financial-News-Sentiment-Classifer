@@ -2,7 +2,7 @@
 
 This project looks at finance related headlines and classifies the sentiment of them. Stock Prices are incredibly difficult to predict as they are so heavily impacted by things like Politics, natural disasters, wars and conflict etc. Hence why NLP techniques are incredibly important in finance as it can identify potential risks and opportunities.
 
-##The following shows a step by step breakdown of how I implemented the application: 
+## The following shows a step by step breakdown of how I implemented the application: 
 
 1. I scraped the NewsAPI to get a bunch of Finance related headlines that were then saved under news_headlines.csv (this was done in scraping.py)
 2. I then created model.py which includes functions to take unclassfied news data and classify them using the FinBERT model
@@ -10,7 +10,7 @@ This project looks at finance related headlines and classifies the sentiment of 
 4. app.py was a simple streamlit application that would present a pie chart of positive/ negative/ neutral headlines, a line graph of sentiment over time and an input box where a user can type in their own headline and it would return the sentiment + a confidence score
 5. Finally, I used the python "os" and "schedule" libraries to automate the scraping and classification of news headlines so I can keep track of how the sentiment of Financial news changes over time. 
 
-##Below I wanted to document some mistakes i made/ tips for the future: 
+## Below I wanted to document some mistakes i made/ tips for the future: 
 
 1. My code crashed as my news_headlines.csv didn't have a sentiment column and my classified_csv did and model.py expected a "sentiment" column
      - I added a if statement check to see if the sentiment column existed, and to create it if it didn't exist.
